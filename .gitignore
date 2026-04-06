@@ -1,0 +1,26 @@
+# Binary
+/hermes
+/hermes.exe
+hermes.conf
+
+# Database files
+*.db
+*.db-wal
+*.db-shm
+
+# Go build cache
+*.test
+*.out
+vendor/
+
+# Output files
+simulate_*
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo

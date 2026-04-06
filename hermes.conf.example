@@ -1,0 +1,52 @@
+# Hermes configuration
+# Copy this file to ~/.config/hermes/config or hermes.conf
+# and fill in the values for your environment.
+
+# Network: mainnet (default) or testnet
+# Smart contract artifacts for each network are embedded in the binary.
+#Network = mainnet
+
+# Path to the SQLite database file (created automatically on first run).
+# Defaults to hermes.db in the same directory as this config file.
+#DbPath = /path/to/hermes.db
+
+# Algorand node connection
+# When not set, Hermes uses the free AlgoNode public endpoints by default
+# (mainnet-api.algonode.cloud or testnet-api.algonode.cloud depending on
+# Network). This is fine for interactive use (deposit, withdraw, etc.).
+#
+# If you run the background daemon, use your own node instead — continuous
+# polling against public endpoints may be rate-limited.
+#
+# Examples:
+#   Own node:           http://localhost:4001
+#   AlgoNode mainnet:   https://mainnet-api.algonode.cloud
+#   AlgoNode testnet:   https://testnet-api.algonode.cloud
+#AlgodUrl =
+#AlgodToken =
+
+# Optional: Indexer fallback for deep history catchup.
+# When using the default AlgoNode endpoints the matching indexer is enabled
+# automatically to avoid excessive block-by-block requests against public algod.
+# Override here if you want to use a different indexer, or set to blank to
+# disable indexer fallback entirely.
+# Free AlgoNode mainnet indexer: https://mainnet-idx.algonode.cloud
+# Free AlgoNode testnet indexer: https://testnet-idx.algonode.cloud
+#IndexerUrl =
+#IndexerToken =
+
+
+# Default Algorand address for deposits (optional convenience setting)
+UserAddress =
+
+# Mnemonic for signing deposit transactions (optional).
+# If set, you will not be prompted when running 'deposit'.
+# Only use this on a personal machine with a secure config file (chmod 600).
+#Mnemonic = word1 word2 word3 ...
+
+# Path to the log file (created automatically).
+# All note events (generation, confirmation, errors, panics) are written here
+# so notes can be recovered even if the process crashes mid-operation.
+# Defaults to hermes.log in the same directory as the database.
+# The file is created with mode 0600 (owner read/write only).
+#LogPath = /path/to/hermes.log
